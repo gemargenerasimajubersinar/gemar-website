@@ -24,3 +24,8 @@ const observer = new IntersectionObserver((entries)=>{
 })
 
 hiddenElements.forEach((el)=>observer.observe(el));
+document.querySelectorAll(".learn-card img").forEach(img => {
+  img.addEventListener("click", () => {
+    img.parentElement.classList.toggle("active");
+  });
+});

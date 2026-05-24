@@ -238,23 +238,35 @@ section{
   gap:40px;
 }
 
-.learn-box{
-  display:flex;
-  align-items:center;
-  gap:40px;
+.learn-card{
   background:rgba(255,255,255,0.05);
   border-radius:25px;
   padding:25px;
   border:1px solid rgba(255,255,255,0.1);
   transition:0.4s;
-  flex-wrap:wrap;
+  text-align:center;
 }
 
-.learn-box img{
-  width:320px;
-  height:220px;
-  object-fit:cover;
+.learn-card img{
+  width:100%;
+  max-width:350px;
   border-radius:20px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.learn-card img:hover{
+  transform:scale(1.03);
+}
+
+.learn-text{
+  display:none;
+  margin-top:25px;
+  text-align:left;
+}
+
+.learn-card.active .learn-text{
+  display:block;
 }
 
 .learn-text h3{
@@ -268,6 +280,23 @@ section{
   color:#d8d8d8;
 }
 
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .learn-card{
+    padding:20px;
+  }
+
+  .learn-card img{
+    max-width:100%;
+  }
+
+  .learn-text h3{
+    font-size:26px;
+  }
+
+}
 /* GALLERY */
 
 .gallery-item img{
@@ -363,6 +392,91 @@ footer{
   .social-icons a{
     color:white;
     font-size:18px;
+  }
+
+}
+.learn-box {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  background: rgba(255,255,255,0.05);
+  padding: 25px;
+  border-radius: 20px;
+  margin-bottom: 40px;
+}
+
+.learn-box img {
+  width: 300px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.learn-text {
+  flex: 1;
+}
+
+/* HP */
+@media (max-width: 768px) {
+
+  .learn-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .learn-box img {
+    width: 100%;
+    max-width: 320px;
+  }
+
+}
+.learn-card{
+  background: rgba(255,255,255,0.05);
+  border-radius: 25px;
+  padding: 25px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.learn-card img{
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.learn-card img:hover{
+  transform: scale(1.02);
+}
+
+.learn-overlay{
+  display: none;
+  margin-top: 25px;
+}
+
+.learn-overlay.show-text{
+  display: block;
+}
+
+.learn-overlay h3{
+  color: #ffd000;
+  margin-bottom: 15px;
+  font-size: 28px;
+}
+
+.learn-overlay p{
+  line-height: 1.8;
+  color: #d8d8d8;
+}
+
+@media(max-width:768px){
+
+  .learn-card img{
+    max-width:100%;
+  }
+
+  .learn-overlay h3{
+    font-size:22px;
   }
 
 }
